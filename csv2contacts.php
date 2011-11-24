@@ -636,7 +636,7 @@ function setProperty($property, $value, &$props, $properties) {
 
 
 function setEmailAddress($emailAddress, $displayName, $cnt, &$props, $properties, &$nremails, &$abprovidertype){
-    if (isset($emailAddress)){
+    if (!empty($emailAddress)){
         $email = to_windows1252($emailAddress);
         if (isset($displayName)){
             $name = to_windows1252($displayName); // adding a email address requires a name
